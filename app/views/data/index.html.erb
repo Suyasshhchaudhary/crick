@@ -1,0 +1,13 @@
+<h1>Data from Redis</h1>
+<ul id="data-list">
+  <% RedisData.all.each do |data| %>
+    <li><%= data %></li>
+  <% end %>
+</ul>
+
+<form id="new-data-form">
+  <input type="text" id="data-input">
+  <button type="submit">Add Data</button>
+</form>
+
+<%= javascript_include_tag "application" %>

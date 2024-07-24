@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Exit on any error
+set -e
+
+# Check for any pending migrations and run them before starting the server
+#if [[ "$RAILS_ENV" == "production" ]]; then
+#  echo "Running database migrations..."
+#  bundle exec rails db:migrate
+#fi
+
+# Execute the main process (what's set as CMD in the Dockerfile)
+exec "$@"
+
